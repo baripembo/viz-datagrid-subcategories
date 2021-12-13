@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset='utf-8' />
-    <title>Viz Starter</title>
+    <title>Data Grid Completeness</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel='icon' type='image/png' href='https://data.humdata.org/images/icons/hdx.ico' />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link href='css/styles.css' rel='stylesheet' />
   </head>
 
@@ -13,27 +13,36 @@
 
     <main>
       <div class='grid-container'>
-        <div class='col-12'>
-          <h1>Viz Starter</h1>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <div class='col-10'>
+          <h2 class='header'>Data Grid Completeness by Location and Sub-category
+            <div class="form-select control-group control-order-by pull-right">
+              <label for="field-order-by" class="uppercase">Order by</label>
+              <div class="dropdown orderDropdown" data-module-additional="#organizationsSection">
+                <button id="field-order-by" class="dropdown-toggle sspBold16" data-toggle="dropdown" style="background-color: transparent;">
+                  <span class="dropdown-toggle-text">Complete % (dsc)</span>
+                  <i class="humanitarianicons-Down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-inverse" role="menu" style="max-height: 241px; overflow-y: auto;">
+                  <li><a tabindex="-1" val="title desc">Complete % (dsc)</a></li>
+                  <li><a tabindex="-1" val="title asc">Complete % (asc)</a></li>
+                </ul>
+              </div>
+            </div>
+<!--             <div class='sort-container'>
+              <label>Order By</label>
+              <select class='sort-select'>
+                <option>Complete % (asc)</option>
+              </select>
+            </div> -->
+          </h2>
+          <div class='legend small'>
+            Data Completeness: <div class='chip chip-complete'></div> Complete <div class='chip chip-incomplete'></div> Incomplete <div class='chip chip-nodata'></div> No data <div class='chip chip-na'></div> NA
+          </div>
+          <div class='table-container'></div>
+          <div class='heatmap'></div>
         </div>
       </div>
     </main>
-
-    <footer>
-      <div class='logos'>
-        <div class='grid-container'>
-          <div class='col-12'>
-            <a href='https://www.unocha.org' target='_blank'>
-              <img height='30' src='assets/logo-ocha-gray.png'>
-            </a>
-            <a href='https://centre.humdata.org' target='_blank'>
-              <img height='38' src='assets/logo-centre-gray.png'>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
 
     <!-- start Mixpanel -->
     <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
@@ -41,6 +50,7 @@
       for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
     </script>
     <!-- End Mixpanel -->
+    <script src='https://d3js.org/d3.v6.js'></script>
     <script type='text/javascript' src='js/bundle.min.js'></script>
   </body>
 </html>

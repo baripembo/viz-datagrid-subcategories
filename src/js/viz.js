@@ -1,26 +1,169 @@
 $( document ).ready(function() {
-  const DATA_URL = 'data/';
-  let isMobile = $(window).width()<600? true : false;
-  let dataUrls = ['geodata_locations.geojson'];
+  const DATA_COMPLETE = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso3&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=subcategory&tagger-04-tag=%23subcategory&tagger-05-header=category&tagger-05-tag=%23category&tagger-06-header=status&tagger-06-tag=%23status&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1171577919';
+  const PCT_COMPLETE_SUBCATEGORY  = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=subcategory&tagger-02-tag=%23subcategory&tagger-03-header=category&tagger-03-tag=%23category&tagger-04-header=percentage+data+complete&tagger-04-tag=%23per%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23per%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23per%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1944345237';
+  const PCT_COMPLETE_COUNTRY = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=percentage+data+complete&tagger-04-tag=%23pct%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23pct%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23pct%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D579688831';
+  const pctFormat = d3.format('.0%');
+  let columns, items = [];
+  let iconMap, countryMap;
+
 
   function getData() {
-    dataUrls.forEach(function (url, index) {
-      loadData(url, function (responseText) {
-        parseData(JSON.parse(responseText), index);
+    Promise.all([
+      d3.csv(DATA_COMPLETE),
+      d3.csv(PCT_COMPLETE_SUBCATEGORY),
+      d3.csv(PCT_COMPLETE_COUNTRY)
+    ]).then(function(d) {
+      console.log('Data loaded');
+      let data = d[0];
+      let pctSubcategoryData = d[1];
+      let pctCountryData = d[2]
+
+      // console.log(data)
+      // console.log(pctSubcategoryData)
+      // console.log(pctCountryData)
+
+      //map icons to category
+      iconMap = {
+        'Affected People': 'humanitarianicons-Affected-population',
+        'Coordination & Context': 'humanitarianicons-Coordination',
+        'Food Security & Nutrition': 'humanitarianicons-Food-Security',
+        'Geography & Infrastructure': 'humanitarianicons-Location',
+        'Health & Education': 'humanitarianicons-Health',
+        'Population & Socio-economic Indicators': 'humanitarianicons-People-in-need'
+      };
+
+      countryMap = d3.group(data, d => d['#location']);
+
+      //define table column labels
+      columns = Array.from(new Set(data.map(d => d['#location']))).sort();
+      columns.unshift('subcategory');
+      columns.push('percentComplete');
+
+      //group data by category and then sort by subcategories
+      const categories = d3.group(data, d=> d['#category']);
+      let subcategoryOrder = [];
+      categories.forEach(function(cat) {
+        let subcats = Array.from(new Set(cat.map(d => d['#subcategory']))).sort();
+        subcats.forEach(function(sc) {
+          subcategoryOrder.push({category: cat[0]['#category'], subcategory: sc})
+        });
+      });
+
+      //format data for table
+      const subcategories = d3.group(data, d => d['#subcategory'], d => d['#location']);
+      const pctComplete = d3.group(pctSubcategoryData, d=> d['#subcategory']);
+      const pctCountryComplete = d3.group(pctCountryData, d=> d['#location']);
+      let pctCountryValues = {subcategory: 'countryPctComplete', percentComplete: null};
+      subcategoryOrder.forEach(function(sc) {
+        let subcategory = subcategories.get(sc.subcategory);
+        let pct = pctComplete.get(sc.subcategory);
+        let item = {subcategory: sc.subcategory, percentComplete: pctFormat(pct[0]['#per+complete']), category: sc.category};
+        columns.forEach(function(col) {
+          let pctCountry = pctCountryComplete.get(col);
+          if (pctCountry!==undefined) {
+            pctCountryValues[col] = pctFormat(pctCountry[0]['#pct+complete']);
+          }
+          let arr = subcategory.get(col);
+          if (arr!==undefined) {
+            item[col] = arr[0]['#status'];
+          }
+        });
+        items.push(item);
+      });
+      items.push(pctCountryValues);
+      //console.log(items);
+
+      createTable();
+    });
+
+    initDisplay();
+  }
+
+  function initDisplay() {
+    $('#field-order-by').on('click', function() {
+      $('.orderDropdown').addClass('open');
+    });
+
+    $(document).mouseup(function (e) {
+      let sortBtn = $('#field-order-by');
+      if (!sortBtn.is(e.target) && 
+      sortBtn.has(e.target).length === 0) {
+        $('.orderDropdown').removeClass('open');
+      }
+    });
+  }
+
+  function createTable() {
+    var tooltip = d3.select('body').append('div')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
+
+
+    let table = d3.select('.table-container').append('table');
+    let headers = table.append('thead').append('tr')
+      .selectAll('th')
+      .data(columns).enter()
+      .append('th')
+      .classed('rotate', d => d!=='subcategory' && d!=='percentComplete')
+      .html(function (d) {
+        let iso = (countryMap.get(d)!==undefined) ? (countryMap.get(d)[0]['#iso3']).toUpperCase() : '';
+        return d==='subcategory'||d==='percentComplete' ? '' : `<div><img class="flag" src="https://data.humdata.org/visualization/datagrid/assets/flags/${iso}.png">${d}</div>`;
+      });
+
+    
+    let rows = table.append('tbody').selectAll('tr')
+      .data(items).enter()
+      .append('tr')
+      .attr('class', function (d) {
+        return d.subcategory;
+      });
+    
+    rows.selectAll('td')
+      .data(function (d) {
+        return columns.map(function (col) {
+          let val = (d[col]===undefined) ? 'Empty' : d[col];
+          let obj = { name: col, value: val};
+          obj['category'] = (d.category===undefined) ? d.subcategory : d.category;
+          return obj;
+        });
+      }).enter()
+      .append('td')
+      .attr('class', function (d) {
+        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : d.value;
       })
-    })
-  }
+      .html(function (d) {
+        let content = '';
+        if (d.name==='subcategory') {
+          content = '<div class="icon-container"><i class="'+iconMap[d.category]+'"></i></div>' + d.value; 
+        }
+        if (d.name==='percentComplete' || d.category==='countryPctComplete') {
+          content = d.value; 
+        }
+        return content;
+      })
+      .on('mouseover', function(e, d) {
+        if (d.name==='subcategory' || d.name==='percentComplete' || d.category==='countryPctComplete') {
+          let content = '';
+          if (d.name==='subcategory')
+            content = d.category;
+          if (d.name==='percentComplete')
+            content = 'Complete % of ' + d.category;
+          if (d.category==='countryPctComplete')
+            content = 'Complete % of ' + d.name;
 
-  function loadData(dataPath, done) {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function () { return done(this.responseText) }
-    xhr.open('GET', DATA_URL+dataPath, true);
-    xhr.send();
-  }
-
-  function parseData(geoData, index) {
-    //do something with the data
-    console.log(geoData, index)
+          tooltip.transition()
+            .duration(200)
+            .style('opacity', .9);
+          tooltip.html(content)
+            .style('left', ($(e.target).offset().left + $(e.target).width()/2 - $('.tooltip').width()/2) + 'px')
+            .style('top', ($(e.target).offset().top - $('.tooltip').outerHeight()) + 'px');
+        }
+      })
+      .on('mouseout', function(d) {
+        tooltip.transition()
+          .duration(500)
+          .style('opacity', 0);
+       });
   }
 
   function initTracking() {

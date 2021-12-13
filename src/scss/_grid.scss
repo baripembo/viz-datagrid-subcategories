@@ -1,25 +1,25 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-gap: 30px;
   grid-template-rows: auto;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1173px;
   &.center--vertical {
-		align-items: center;
+    align-items: center;
   }
 }
 
+.col-2 {
+ grid-column: span 2;
+}
+
 .col-3 {
-	grid-column: span 3;
+ grid-column: span 3;
 }
 
 .col-4 {
-	grid-column: span 4;
-}
-
-.col-5 {
-  grid-column: span 5;
+ grid-column: span 4;
 }
 
 .col-6 {
@@ -31,28 +31,27 @@
 }
 
 .col-8 {
-  grid-column: 3 / span 8;
+  grid-column: span 8;
 }
 
-.col-12 {
-  grid-column: span 12;
+.col-10 {
+  grid-column: span 10;
 }
 
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 0;
   }
 
+  .col-2,
   .col-3,
   .col-4,
-  .col-5,
   .col-6,
   .col-7,
   .col-8,
-  .col-12 {
+  .col-10 {
     grid-column: 1 / -1;
   }
 }
