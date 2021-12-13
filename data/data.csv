@@ -1,0 +1,568 @@
+Date,ISO3,Location,Subcategory,Status
+2021-12-01,AFG,Afghanistan,Internally-Displaced Persons,Complete
+2021-12-01,CAF,Central African Republic,Internally-Displaced Persons,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Internally-Displaced Persons,Complete
+2021-12-01,COL,Colombia,Internally-Displaced Persons,Complete
+2021-12-01,MOZ,Mozambique,Internally-Displaced Persons,Complete
+2021-12-01,MMR,Myanmar,Internally-Displaced Persons,Complete
+2021-12-01,SOM,Somalia,Internally-Displaced Persons,Complete
+2021-12-01,SDN,Sudan,Internally-Displaced Persons,Complete
+2021-12-01,TCD,Chad,Internally-Displaced Persons,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Internally-Displaced Persons,Empty
+2021-12-01,YEM,Yemen,Internally-Displaced Persons,Complete
+2021-12-01,PSE,State of Palestine,Internally-Displaced Persons,Complete
+2021-12-01,BFA,Burkina Faso,Internally-Displaced Persons,Complete
+2021-12-01,ETH,Ethiopia,Internally-Displaced Persons,Complete
+2021-12-01,IRQ,Iraq,Internally-Displaced Persons,Complete
+2021-12-01,MLI,Mali,Internally-Displaced Persons,Complete
+2021-12-01,NER,Niger,Internally-Displaced Persons,Complete
+2021-12-01,SYR,Syrian Arab Republic,Internally-Displaced Persons,Complete
+2021-12-01,ZWE,Zimbabwe,Internally-Displaced Persons,Complete
+2021-12-01,BDI,Burundi,Internally-Displaced Persons,Complete
+2021-12-01,CMR,Cameroon,Internally-Displaced Persons,Complete
+2021-12-01,HTI,Haiti,Internally-Displaced Persons,Complete
+2021-12-01,LBY,Libya,Internally-Displaced Persons,Complete
+2021-12-01,NGA,Nigeria,Internally-Displaced Persons,Complete
+2021-12-01,SSD,South Sudan,Internally-Displaced Persons,Complete
+2021-12-01,UKR,Ukraine,Internally-Displaced Persons,Complete
+2021-12-01,PAK,Pakistan,Internally-Displaced Persons,Complete
+2021-12-01,AFG,Afghanistan,Refugees & Persons of Concern,Complete
+2021-12-01,CAF,Central African Republic,Refugees & Persons of Concern,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Refugees & Persons of Concern,Complete
+2021-12-01,COL,Colombia,Refugees & Persons of Concern,Complete
+2021-12-01,MOZ,Mozambique,Refugees & Persons of Concern,Complete
+2021-12-01,MMR,Myanmar,Refugees & Persons of Concern,Complete
+2021-12-01,SOM,Somalia,Refugees & Persons of Concern,Complete
+2021-12-01,SDN,Sudan,Refugees & Persons of Concern,Complete
+2021-12-01,TCD,Chad,Refugees & Persons of Concern,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Refugees & Persons of Concern,Empty
+2021-12-01,YEM,Yemen,Refugees & Persons of Concern,Complete
+2021-12-01,PSE,State of Palestine,Refugees & Persons of Concern,Complete
+2021-12-01,BFA,Burkina Faso,Refugees & Persons of Concern,Complete
+2021-12-01,ETH,Ethiopia,Refugees & Persons of Concern,Complete
+2021-12-01,IRQ,Iraq,Refugees & Persons of Concern,Complete
+2021-12-01,MLI,Mali,Refugees & Persons of Concern,Complete
+2021-12-01,NER,Niger,Refugees & Persons of Concern,Complete
+2021-12-01,SYR,Syrian Arab Republic,Refugees & Persons of Concern,Complete
+2021-12-01,ZWE,Zimbabwe,Refugees & Persons of Concern,Complete
+2021-12-01,BDI,Burundi,Refugees & Persons of Concern,Complete
+2021-12-01,CMR,Cameroon,Refugees & Persons of Concern,Complete
+2021-12-01,HTI,Haiti,Refugees & Persons of Concern,Complete
+2021-12-01,LBY,Libya,Refugees & Persons of Concern,Empty
+2021-12-01,NGA,Nigeria,Refugees & Persons of Concern,Complete
+2021-12-01,SSD,South Sudan,Refugees & Persons of Concern,Complete
+2021-12-01,UKR,Ukraine,Refugees & Persons of Concern,Not applicable
+2021-12-01,PAK,Pakistan,Refugees & Persons of Concern,Complete
+2021-12-01,AFG,Afghanistan,Returnees,Complete
+2021-12-01,CAF,Central African Republic,Returnees,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Returnees,Complete
+2021-12-01,COL,Colombia,Returnees,Empty
+2021-12-01,MOZ,Mozambique,Returnees,Empty
+2021-12-01,MMR,Myanmar,Returnees,Complete
+2021-12-01,SOM,Somalia,Returnees,Complete
+2021-12-01,SDN,Sudan,Returnees,Complete
+2021-12-01,TCD,Chad,Returnees,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Returnees,Empty
+2021-12-01,YEM,Yemen,Returnees,Incomplete
+2021-12-01,PSE,State of Palestine,Returnees,Not applicable
+2021-12-01,BFA,Burkina Faso,Returnees,Incomplete
+2021-12-01,ETH,Ethiopia,Returnees,Incomplete
+2021-12-01,IRQ,Iraq,Returnees,Complete
+2021-12-01,MLI,Mali,Returnees,Complete
+2021-12-01,NER,Niger,Returnees,Incomplete
+2021-12-01,SYR,Syrian Arab Republic,Returnees,Complete
+2021-12-01,ZWE,Zimbabwe,Returnees,Complete
+2021-12-01,BDI,Burundi,Returnees,Complete
+2021-12-01,CMR,Cameroon,Returnees,Complete
+2021-12-01,HTI,Haiti,Returnees,Empty
+2021-12-01,LBY,Libya,Returnees,Complete
+2021-12-01,NGA,Nigeria,Returnees,Complete
+2021-12-01,SSD,South Sudan,Returnees,Complete
+2021-12-01,UKR,Ukraine,Returnees,Not applicable
+2021-12-01,PAK,Pakistan,Returnees,Complete
+2021-12-01,AFG,Afghanistan,Humanitarian Needs,Complete
+2021-12-01,CAF,Central African Republic,Humanitarian Needs,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Humanitarian Needs,Complete
+2021-12-01,COL,Colombia,Humanitarian Needs,Complete
+2021-12-01,MOZ,Mozambique,Humanitarian Needs,Complete
+2021-12-01,MMR,Myanmar,Humanitarian Needs,Complete
+2021-12-01,SOM,Somalia,Humanitarian Needs,Complete
+2021-12-01,SDN,Sudan,Humanitarian Needs,Complete
+2021-12-01,TCD,Chad,Humanitarian Needs,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Humanitarian Needs,Empty
+2021-12-01,YEM,Yemen,Humanitarian Needs,Complete
+2021-12-01,PSE,State of Palestine,Humanitarian Needs,Complete
+2021-12-01,BFA,Burkina Faso,Humanitarian Needs,Complete
+2021-12-01,ETH,Ethiopia,Humanitarian Needs,Complete
+2021-12-01,IRQ,Iraq,Humanitarian Needs,Complete
+2021-12-01,MLI,Mali,Humanitarian Needs,Complete
+2021-12-01,NER,Niger,Humanitarian Needs,Complete
+2021-12-01,SYR,Syrian Arab Republic,Humanitarian Needs,Complete
+2021-12-01,ZWE,Zimbabwe,Humanitarian Needs,Complete
+2021-12-01,BDI,Burundi,Humanitarian Needs,Complete
+2021-12-01,CMR,Cameroon,Humanitarian Needs,Complete
+2021-12-01,HTI,Haiti,Humanitarian Needs,Complete
+2021-12-01,LBY,Libya,Humanitarian Needs,Complete
+2021-12-01,NGA,Nigeria,Humanitarian Needs,Complete
+2021-12-01,SSD,South Sudan,Humanitarian Needs,Complete
+2021-12-01,UKR,Ukraine,Humanitarian Needs,Complete
+2021-12-01,PAK,Pakistan,Humanitarian Needs,Empty
+2021-12-01,AFG,Afghanistan,Health Facilities,Complete
+2021-12-01,CAF,Central African Republic,Health Facilities,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Health Facilities,Incomplete
+2021-12-01,COL,Colombia,Health Facilities,Complete
+2021-12-01,MOZ,Mozambique,Health Facilities,Incomplete
+2021-12-01,MMR,Myanmar,Health Facilities,Incomplete
+2021-12-01,SOM,Somalia,Health Facilities,Complete
+2021-12-01,SDN,Sudan,Health Facilities,Complete
+2021-12-01,TCD,Chad,Health Facilities,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Health Facilities,Incomplete
+2021-12-01,YEM,Yemen,Health Facilities,Complete
+2021-12-01,PSE,State of Palestine,Health Facilities,Empty
+2021-12-01,BFA,Burkina Faso,Health Facilities,Complete
+2021-12-01,ETH,Ethiopia,Health Facilities,Complete
+2021-12-01,IRQ,Iraq,Health Facilities,Incomplete
+2021-12-01,MLI,Mali,Health Facilities,Incomplete
+2021-12-01,NER,Niger,Health Facilities,Complete
+2021-12-01,SYR,Syrian Arab Republic,Health Facilities,Incomplete
+2021-12-01,ZWE,Zimbabwe,Health Facilities,Complete
+2021-12-01,BDI,Burundi,Health Facilities,Complete
+2021-12-01,CMR,Cameroon,Health Facilities,Complete
+2021-12-01,HTI,Haiti,Health Facilities,Complete
+2021-12-01,LBY,Libya,Health Facilities,Incomplete
+2021-12-01,NGA,Nigeria,Health Facilities,Complete
+2021-12-01,SSD,South Sudan,Health Facilities,Complete
+2021-12-01,UKR,Ukraine,Health Facilities,Incomplete
+2021-12-01,PAK,Pakistan,Health Facilities,Incomplete
+2021-12-01,AFG,Afghanistan,Education Facilities,Complete
+2021-12-01,CAF,Central African Republic,Education Facilities,Incomplete
+2021-12-01,COD,Democratic Republic of the Congo,Education Facilities,Incomplete
+2021-12-01,COL,Colombia,Education Facilities,Complete
+2021-12-01,MOZ,Mozambique,Education Facilities,Incomplete
+2021-12-01,MMR,Myanmar,Education Facilities,Complete
+2021-12-01,SOM,Somalia,Education Facilities,Incomplete
+2021-12-01,SDN,Sudan,Education Facilities,Incomplete
+2021-12-01,TCD,Chad,Education Facilities,Incomplete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Education Facilities,Incomplete
+2021-12-01,YEM,Yemen,Education Facilities,Incomplete
+2021-12-01,PSE,State of Palestine,Education Facilities,Empty
+2021-12-01,BFA,Burkina Faso,Education Facilities,Incomplete
+2021-12-01,ETH,Ethiopia,Education Facilities,Incomplete
+2021-12-01,IRQ,Iraq,Education Facilities,Incomplete
+2021-12-01,MLI,Mali,Education Facilities,Incomplete
+2021-12-01,NER,Niger,Education Facilities,Incomplete
+2021-12-01,SYR,Syrian Arab Republic,Education Facilities,Incomplete
+2021-12-01,ZWE,Zimbabwe,Education Facilities,Complete
+2021-12-01,BDI,Burundi,Education Facilities,Incomplete
+2021-12-01,CMR,Cameroon,Education Facilities,Incomplete
+2021-12-01,HTI,Haiti,Education Facilities,Incomplete
+2021-12-01,LBY,Libya,Education Facilities,Incomplete
+2021-12-01,NGA,Nigeria,Education Facilities,Complete
+2021-12-01,SSD,South Sudan,Education Facilities,Incomplete
+2021-12-01,UKR,Ukraine,Education Facilities,Incomplete
+2021-12-01,PAK,Pakistan,Education Facilities,Incomplete
+2021-12-01,AFG,Afghanistan,3w - Who is doing what where,Complete
+2021-12-01,CAF,Central African Republic,3w - Who is doing what where,Complete
+2021-12-01,COD,Democratic Republic of the Congo,3w - Who is doing what where,Complete
+2021-12-01,COL,Colombia,3w - Who is doing what where,Complete
+2021-12-01,MOZ,Mozambique,3w - Who is doing what where,Complete
+2021-12-01,MMR,Myanmar,3w - Who is doing what where,Incomplete
+2021-12-01,SOM,Somalia,3w - Who is doing what where,Complete
+2021-12-01,SDN,Sudan,3w - Who is doing what where,Complete
+2021-12-01,TCD,Chad,3w - Who is doing what where,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),3w - Who is doing what where,Complete
+2021-12-01,YEM,Yemen,3w - Who is doing what where,Incomplete
+2021-12-01,PSE,State of Palestine,3w - Who is doing what where,Incomplete
+2021-12-01,BFA,Burkina Faso,3w - Who is doing what where,Complete
+2021-12-01,ETH,Ethiopia,3w - Who is doing what where,Complete
+2021-12-01,IRQ,Iraq,3w - Who is doing what where,Complete
+2021-12-01,MLI,Mali,3w - Who is doing what where,Incomplete
+2021-12-01,NER,Niger,3w - Who is doing what where,Complete
+2021-12-01,SYR,Syrian Arab Republic,3w - Who is doing what where,Incomplete
+2021-12-01,ZWE,Zimbabwe,3w - Who is doing what where,Complete
+2021-12-01,BDI,Burundi,3w - Who is doing what where,Complete
+2021-12-01,CMR,Cameroon,3w - Who is doing what where,Complete
+2021-12-01,HTI,Haiti,3w - Who is doing what where,Complete
+2021-12-01,LBY,Libya,3w - Who is doing what where,Complete
+2021-12-01,NGA,Nigeria,3w - Who is doing what where,Complete
+2021-12-01,SSD,South Sudan,3w - Who is doing what where,Complete
+2021-12-01,UKR,Ukraine,3w - Who is doing what where,Complete
+2021-12-01,PAK,Pakistan,3w - Who is doing what where,Complete
+2021-12-01,AFG,Afghanistan,Funding,Complete
+2021-12-01,CAF,Central African Republic,Funding,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Funding,Complete
+2021-12-01,COL,Colombia,Funding,Complete
+2021-12-01,MOZ,Mozambique,Funding,Complete
+2021-12-01,MMR,Myanmar,Funding,Complete
+2021-12-01,SOM,Somalia,Funding,Complete
+2021-12-01,SDN,Sudan,Funding,Complete
+2021-12-01,TCD,Chad,Funding,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Funding,Complete
+2021-12-01,YEM,Yemen,Funding,Complete
+2021-12-01,PSE,State of Palestine,Funding,Complete
+2021-12-01,BFA,Burkina Faso,Funding,Complete
+2021-12-01,ETH,Ethiopia,Funding,Complete
+2021-12-01,IRQ,Iraq,Funding,Complete
+2021-12-01,MLI,Mali,Funding,Complete
+2021-12-01,NER,Niger,Funding,Complete
+2021-12-01,SYR,Syrian Arab Republic,Funding,Complete
+2021-12-01,ZWE,Zimbabwe,Funding,Complete
+2021-12-01,BDI,Burundi,Funding,Complete
+2021-12-01,CMR,Cameroon,Funding,Complete
+2021-12-01,HTI,Haiti,Funding,Complete
+2021-12-01,LBY,Libya,Funding,Complete
+2021-12-01,NGA,Nigeria,Funding,Complete
+2021-12-01,SSD,South Sudan,Funding,Complete
+2021-12-01,UKR,Ukraine,Funding,Complete
+2021-12-01,PAK,Pakistan,Funding,Complete
+2021-12-01,AFG,Afghanistan,Affected Areas,Complete
+2021-12-01,CAF,Central African Republic,Affected Areas,Empty
+2021-12-01,COD,Democratic Republic of the Congo,Affected Areas,Complete
+2021-12-01,COL,Colombia,Affected Areas,Complete
+2021-12-01,MOZ,Mozambique,Affected Areas,Empty
+2021-12-01,MMR,Myanmar,Affected Areas,Empty
+2021-12-01,SOM,Somalia,Affected Areas,Complete
+2021-12-01,SDN,Sudan,Affected Areas,Complete
+2021-12-01,TCD,Chad,Affected Areas,Empty
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Affected Areas,Empty
+2021-12-01,YEM,Yemen,Affected Areas,Complete
+2021-12-01,PSE,State of Palestine,Affected Areas,Complete
+2021-12-01,BFA,Burkina Faso,Affected Areas,Complete
+2021-12-01,ETH,Ethiopia,Affected Areas,Complete
+2021-12-01,IRQ,Iraq,Affected Areas,Complete
+2021-12-01,MLI,Mali,Affected Areas,Empty
+2021-12-01,NER,Niger,Affected Areas,Empty
+2021-12-01,SYR,Syrian Arab Republic,Affected Areas,Complete
+2021-12-01,ZWE,Zimbabwe,Affected Areas,Complete
+2021-12-01,BDI,Burundi,Affected Areas,Complete
+2021-12-01,CMR,Cameroon,Affected Areas,Empty
+2021-12-01,HTI,Haiti,Affected Areas,Empty
+2021-12-01,LBY,Libya,Affected Areas,Empty
+2021-12-01,NGA,Nigeria,Affected Areas,Empty
+2021-12-01,SSD,South Sudan,Affected Areas,Empty
+2021-12-01,UKR,Ukraine,Affected Areas,Empty
+2021-12-01,PAK,Pakistan,Affected Areas,Empty
+2021-12-01,AFG,Afghanistan,Conflict Events,Empty
+2021-12-01,CAF,Central African Republic,Conflict Events,Empty
+2021-12-01,COD,Democratic Republic of the Congo,Conflict Events,Empty
+2021-12-01,COL,Colombia,Conflict Events,Incomplete
+2021-12-01,MOZ,Mozambique,Conflict Events,Empty
+2021-12-01,MMR,Myanmar,Conflict Events,Empty
+2021-12-01,SOM,Somalia,Conflict Events,Empty
+2021-12-01,SDN,Sudan,Conflict Events,Empty
+2021-12-01,TCD,Chad,Conflict Events,Empty
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Conflict Events,Empty
+2021-12-01,YEM,Yemen,Conflict Events,Empty
+2021-12-01,PSE,State of Palestine,Conflict Events,Empty
+2021-12-01,BFA,Burkina Faso,Conflict Events,Empty
+2021-12-01,ETH,Ethiopia,Conflict Events,Empty
+2021-12-01,IRQ,Iraq,Conflict Events,Empty
+2021-12-01,MLI,Mali,Conflict Events,Empty
+2021-12-01,NER,Niger,Conflict Events,Empty
+2021-12-01,SYR,Syrian Arab Republic,Conflict Events,Empty
+2021-12-01,ZWE,Zimbabwe,Conflict Events,Empty
+2021-12-01,BDI,Burundi,Conflict Events,Empty
+2021-12-01,CMR,Cameroon,Conflict Events,Empty
+2021-12-01,HTI,Haiti,Conflict Events,Empty
+2021-12-01,LBY,Libya,Conflict Events,Empty
+2021-12-01,NGA,Nigeria,Conflict Events,Empty
+2021-12-01,SSD,South Sudan,Conflict Events,Empty
+2021-12-01,UKR,Ukraine,Conflict Events,Incomplete
+2021-12-01,PAK,Pakistan,Conflict Events,Empty
+2021-12-01,AFG,Afghanistan,Humanitarian Access,Incomplete
+2021-12-01,CAF,Central African Republic,Humanitarian Access,Incomplete
+2021-12-01,COD,Democratic Republic of the Congo,Humanitarian Access,Incomplete
+2021-12-01,COL,Colombia,Humanitarian Access,Complete
+2021-12-01,MOZ,Mozambique,Humanitarian Access,Empty
+2021-12-01,MMR,Myanmar,Humanitarian Access,Complete
+2021-12-01,SOM,Somalia,Humanitarian Access,Incomplete
+2021-12-01,SDN,Sudan,Humanitarian Access,Incomplete
+2021-12-01,TCD,Chad,Humanitarian Access,Empty
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Humanitarian Access,Empty
+2021-12-01,YEM,Yemen,Humanitarian Access,Incomplete
+2021-12-01,PSE,State of Palestine,Humanitarian Access,Complete
+2021-12-01,BFA,Burkina Faso,Humanitarian Access,Incomplete
+2021-12-01,ETH,Ethiopia,Humanitarian Access,Empty
+2021-12-01,IRQ,Iraq,Humanitarian Access,Incomplete
+2021-12-01,MLI,Mali,Humanitarian Access,Incomplete
+2021-12-01,NER,Niger,Humanitarian Access,Incomplete
+2021-12-01,SYR,Syrian Arab Republic,Humanitarian Access,Incomplete
+2021-12-01,ZWE,Zimbabwe,Humanitarian Access,Empty
+2021-12-01,BDI,Burundi,Humanitarian Access,Incomplete
+2021-12-01,CMR,Cameroon,Humanitarian Access,Incomplete
+2021-12-01,HTI,Haiti,Humanitarian Access,Incomplete
+2021-12-01,LBY,Libya,Humanitarian Access,Empty
+2021-12-01,NGA,Nigeria,Humanitarian Access,Incomplete
+2021-12-01,SSD,South Sudan,Humanitarian Access,Incomplete
+2021-12-01,UKR,Ukraine,Humanitarian Access,Complete
+2021-12-01,PAK,Pakistan,Humanitarian Access,Incomplete
+2021-12-01,AFG,Afghanistan,Transportation Status,Empty
+2021-12-01,CAF,Central African Republic,Transportation Status,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Transportation Status,Incomplete
+2021-12-01,COL,Colombia,Transportation Status,Empty
+2021-12-01,MOZ,Mozambique,Transportation Status,Empty
+2021-12-01,MMR,Myanmar,Transportation Status,Empty
+2021-12-01,SOM,Somalia,Transportation Status,Complete
+2021-12-01,SDN,Sudan,Transportation Status,Complete
+2021-12-01,TCD,Chad,Transportation Status,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Transportation Status,Complete
+2021-12-01,YEM,Yemen,Transportation Status,Incomplete
+2021-12-01,PSE,State of Palestine,Transportation Status,Incomplete
+2021-12-01,BFA,Burkina Faso,Transportation Status,Complete
+2021-12-01,ETH,Ethiopia,Transportation Status,Empty
+2021-12-01,IRQ,Iraq,Transportation Status,Empty
+2021-12-01,MLI,Mali,Transportation Status,Empty
+2021-12-01,NER,Niger,Transportation Status,Empty
+2021-12-01,SYR,Syrian Arab Republic,Transportation Status,Empty
+2021-12-01,ZWE,Zimbabwe,Transportation Status,Empty
+2021-12-01,BDI,Burundi,Transportation Status,Complete
+2021-12-01,CMR,Cameroon,Transportation Status,Complete
+2021-12-01,HTI,Haiti,Transportation Status,Empty
+2021-12-01,LBY,Libya,Transportation Status,Empty
+2021-12-01,NGA,Nigeria,Transportation Status,Empty
+2021-12-01,SSD,South Sudan,Transportation Status,Complete
+2021-12-01,UKR,Ukraine,Transportation Status,Complete
+2021-12-01,PAK,Pakistan,Transportation Status,Empty
+2021-12-01,AFG,Afghanistan,Baseline Population,Complete
+2021-12-01,CAF,Central African Republic,Baseline Population,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Baseline Population,Complete
+2021-12-01,COL,Colombia,Baseline Population,Incomplete
+2021-12-01,MOZ,Mozambique,Baseline Population,Complete
+2021-12-01,MMR,Myanmar,Baseline Population,Complete
+2021-12-01,SOM,Somalia,Baseline Population,Incomplete
+2021-12-01,SDN,Sudan,Baseline Population,Complete
+2021-12-01,TCD,Chad,Baseline Population,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Baseline Population,Complete
+2021-12-01,YEM,Yemen,Baseline Population,Incomplete
+2021-12-01,PSE,State of Palestine,Baseline Population,Complete
+2021-12-01,BFA,Burkina Faso,Baseline Population,Complete
+2021-12-01,ETH,Ethiopia,Baseline Population,Complete
+2021-12-01,IRQ,Iraq,Baseline Population,Empty
+2021-12-01,MLI,Mali,Baseline Population,Complete
+2021-12-01,NER,Niger,Baseline Population,Complete
+2021-12-01,SYR,Syrian Arab Republic,Baseline Population,Incomplete
+2021-12-01,ZWE,Zimbabwe,Baseline Population,Complete
+2021-12-01,BDI,Burundi,Baseline Population,Complete
+2021-12-01,CMR,Cameroon,Baseline Population,Empty
+2021-12-01,HTI,Haiti,Baseline Population,Complete
+2021-12-01,LBY,Libya,Baseline Population,Complete
+2021-12-01,NGA,Nigeria,Baseline Population,Complete
+2021-12-01,SSD,South Sudan,Baseline Population,Complete
+2021-12-01,UKR,Ukraine,Baseline Population,Incomplete
+2021-12-01,PAK,Pakistan,Baseline Population,Incomplete
+2021-12-01,AFG,Afghanistan,Poverty Rate,Complete
+2021-12-01,CAF,Central African Republic,Poverty Rate,Incomplete
+2021-12-01,COD,Democratic Republic of the Congo,Poverty Rate,Incomplete
+2021-12-01,COL,Colombia,Poverty Rate,Incomplete
+2021-12-01,MOZ,Mozambique,Poverty Rate,Incomplete
+2021-12-01,MMR,Myanmar,Poverty Rate,Incomplete
+2021-12-01,SOM,Somalia,Poverty Rate,Empty
+2021-12-01,SDN,Sudan,Poverty Rate,Complete
+2021-12-01,TCD,Chad,Poverty Rate,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Poverty Rate,Empty
+2021-12-01,YEM,Yemen,Poverty Rate,Incomplete
+2021-12-01,PSE,State of Palestine,Poverty Rate,Complete
+2021-12-01,BFA,Burkina Faso,Poverty Rate,Complete
+2021-12-01,ETH,Ethiopia,Poverty Rate,Complete
+2021-12-01,IRQ,Iraq,Poverty Rate,Incomplete
+2021-12-01,MLI,Mali,Poverty Rate,Incomplete
+2021-12-01,NER,Niger,Poverty Rate,Incomplete
+2021-12-01,SYR,Syrian Arab Republic,Poverty Rate,Incomplete
+2021-12-01,ZWE,Zimbabwe,Poverty Rate,Complete
+2021-12-01,BDI,Burundi,Poverty Rate,Complete
+2021-12-01,CMR,Cameroon,Poverty Rate,Incomplete
+2021-12-01,HTI,Haiti,Poverty Rate,Complete
+2021-12-01,LBY,Libya,Poverty Rate,Incomplete
+2021-12-01,NGA,Nigeria,Poverty Rate,Complete
+2021-12-01,SSD,South Sudan,Poverty Rate,Empty
+2021-12-01,UKR,Ukraine,Poverty Rate,Incomplete
+2021-12-01,PAK,Pakistan,Poverty Rate,Incomplete
+2021-12-01,AFG,Afghanistan,Food security,Complete
+2021-12-01,CAF,Central African Republic,Food security,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Food security,Complete
+2021-12-01,COL,Colombia,Food security,Empty
+2021-12-01,MOZ,Mozambique,Food security,Complete
+2021-12-01,MMR,Myanmar,Food security,Empty
+2021-12-01,SOM,Somalia,Food security,Complete
+2021-12-01,SDN,Sudan,Food security,Complete
+2021-12-01,TCD,Chad,Food security,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Food security,Empty
+2021-12-01,YEM,Yemen,Food security,Complete
+2021-12-01,PSE,State of Palestine,Food security,Complete
+2021-12-01,BFA,Burkina Faso,Food security,Complete
+2021-12-01,ETH,Ethiopia,Food security,Complete
+2021-12-01,IRQ,Iraq,Food security,Empty
+2021-12-01,MLI,Mali,Food security,Complete
+2021-12-01,NER,Niger,Food security,Complete
+2021-12-01,SYR,Syrian Arab Republic,Food security,Empty
+2021-12-01,ZWE,Zimbabwe,Food security,Complete
+2021-12-01,BDI,Burundi,Food security,Complete
+2021-12-01,CMR,Cameroon,Food security,Complete
+2021-12-01,HTI,Haiti,Food security,Complete
+2021-12-01,LBY,Libya,Food security,Empty
+2021-12-01,NGA,Nigeria,Food security,Complete
+2021-12-01,SSD,South Sudan,Food security,Complete
+2021-12-01,UKR,Ukraine,Food security,Empty
+2021-12-01,PAK,Pakistan,Food security,Complete
+2021-12-01,AFG,Afghanistan,Acute Malnutrition,Complete
+2021-12-01,CAF,Central African Republic,Acute Malnutrition,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Acute Malnutrition,Complete
+2021-12-01,COL,Colombia,Acute Malnutrition,Complete
+2021-12-01,MOZ,Mozambique,Acute Malnutrition,Empty
+2021-12-01,MMR,Myanmar,Acute Malnutrition,Incomplete
+2021-12-01,SOM,Somalia,Acute Malnutrition,Complete
+2021-12-01,SDN,Sudan,Acute Malnutrition,Complete
+2021-12-01,TCD,Chad,Acute Malnutrition,Empty
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Acute Malnutrition,Empty
+2021-12-01,YEM,Yemen,Acute Malnutrition,Complete
+2021-12-01,PSE,State of Palestine,Acute Malnutrition,Empty
+2021-12-01,BFA,Burkina Faso,Acute Malnutrition,Complete
+2021-12-01,ETH,Ethiopia,Acute Malnutrition,Complete
+2021-12-01,IRQ,Iraq,Acute Malnutrition,Empty
+2021-12-01,MLI,Mali,Acute Malnutrition,Complete
+2021-12-01,NER,Niger,Acute Malnutrition,Complete
+2021-12-01,SYR,Syrian Arab Republic,Acute Malnutrition,Empty
+2021-12-01,ZWE,Zimbabwe,Acute Malnutrition,Complete
+2021-12-01,BDI,Burundi,Acute Malnutrition,Complete
+2021-12-01,CMR,Cameroon,Acute Malnutrition,Empty
+2021-12-01,HTI,Haiti,Acute Malnutrition,Complete
+2021-12-01,LBY,Libya,Acute Malnutrition,Empty
+2021-12-01,NGA,Nigeria,Acute Malnutrition,Complete
+2021-12-01,SSD,South Sudan,Acute Malnutrition,Complete
+2021-12-01,UKR,Ukraine,Acute Malnutrition,Not applicable
+2021-12-01,PAK,Pakistan,Acute Malnutrition,Complete
+2021-12-01,AFG,Afghanistan,Food Prices,Complete
+2021-12-01,CAF,Central African Republic,Food Prices,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Food Prices,Complete
+2021-12-01,COL,Colombia,Food Prices,Complete
+2021-12-01,MOZ,Mozambique,Food Prices,Complete
+2021-12-01,MMR,Myanmar,Food Prices,Complete
+2021-12-01,SOM,Somalia,Food Prices,Complete
+2021-12-01,SDN,Sudan,Food Prices,Complete
+2021-12-01,TCD,Chad,Food Prices,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Food Prices,Empty
+2021-12-01,YEM,Yemen,Food Prices,Complete
+2021-12-01,PSE,State of Palestine,Food Prices,Complete
+2021-12-01,BFA,Burkina Faso,Food Prices,Complete
+2021-12-01,ETH,Ethiopia,Food Prices,Complete
+2021-12-01,IRQ,Iraq,Food Prices,Complete
+2021-12-01,MLI,Mali,Food Prices,Complete
+2021-12-01,NER,Niger,Food Prices,Complete
+2021-12-01,SYR,Syrian Arab Republic,Food Prices,Complete
+2021-12-01,ZWE,Zimbabwe,Food Prices,Complete
+2021-12-01,BDI,Burundi,Food Prices,Complete
+2021-12-01,CMR,Cameroon,Food Prices,Complete
+2021-12-01,HTI,Haiti,Food Prices,Complete
+2021-12-01,LBY,Libya,Food Prices,Complete
+2021-12-01,NGA,Nigeria,Food Prices,Complete
+2021-12-01,SSD,South Sudan,Food Prices,Complete
+2021-12-01,UKR,Ukraine,Food Prices,Complete
+2021-12-01,PAK,Pakistan,Food Prices,Complete
+2021-12-01,AFG,Afghanistan,Administrative Divisions,Complete
+2021-12-01,CAF,Central African Republic,Administrative Divisions,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Administrative Divisions,Complete
+2021-12-01,COL,Colombia,Administrative Divisions,Complete
+2021-12-01,MOZ,Mozambique,Administrative Divisions,Complete
+2021-12-01,MMR,Myanmar,Administrative Divisions,Complete
+2021-12-01,SOM,Somalia,Administrative Divisions,Complete
+2021-12-01,SDN,Sudan,Administrative Divisions,Complete
+2021-12-01,TCD,Chad,Administrative Divisions,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Administrative Divisions,Complete
+2021-12-01,YEM,Yemen,Administrative Divisions,Complete
+2021-12-01,PSE,State of Palestine,Administrative Divisions,Complete
+2021-12-01,BFA,Burkina Faso,Administrative Divisions,Complete
+2021-12-01,ETH,Ethiopia,Administrative Divisions,Complete
+2021-12-01,IRQ,Iraq,Administrative Divisions,Complete
+2021-12-01,MLI,Mali,Administrative Divisions,Complete
+2021-12-01,NER,Niger,Administrative Divisions,Complete
+2021-12-01,SYR,Syrian Arab Republic,Administrative Divisions,Complete
+2021-12-01,ZWE,Zimbabwe,Administrative Divisions,Complete
+2021-12-01,BDI,Burundi,Administrative Divisions,Complete
+2021-12-01,CMR,Cameroon,Administrative Divisions,Complete
+2021-12-01,HTI,Haiti,Administrative Divisions,Complete
+2021-12-01,LBY,Libya,Administrative Divisions,Complete
+2021-12-01,NGA,Nigeria,Administrative Divisions,Complete
+2021-12-01,SSD,South Sudan,Administrative Divisions,Complete
+2021-12-01,UKR,Ukraine,Administrative Divisions,Empty
+2021-12-01,PAK,Pakistan,Administrative Divisions,Complete
+2021-12-01,AFG,Afghanistan,Populated Places,Complete
+2021-12-01,CAF,Central African Republic,Populated Places,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Populated Places,Incomplete
+2021-12-01,COL,Colombia,Populated Places,Empty
+2021-12-01,MOZ,Mozambique,Populated Places,Incomplete
+2021-12-01,MMR,Myanmar,Populated Places,Complete
+2021-12-01,SOM,Somalia,Populated Places,Incomplete
+2021-12-01,SDN,Sudan,Populated Places,Complete
+2021-12-01,TCD,Chad,Populated Places,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Populated Places,Incomplete
+2021-12-01,YEM,Yemen,Populated Places,Incomplete
+2021-12-01,PSE,State of Palestine,Populated Places,Complete
+2021-12-01,BFA,Burkina Faso,Populated Places,Complete
+2021-12-01,ETH,Ethiopia,Populated Places,Complete
+2021-12-01,IRQ,Iraq,Populated Places,Incomplete
+2021-12-01,MLI,Mali,Populated Places,Complete
+2021-12-01,NER,Niger,Populated Places,Complete
+2021-12-01,SYR,Syrian Arab Republic,Populated Places,Complete
+2021-12-01,ZWE,Zimbabwe,Populated Places,Empty
+2021-12-01,BDI,Burundi,Populated Places,Incomplete
+2021-12-01,CMR,Cameroon,Populated Places,Complete
+2021-12-01,HTI,Haiti,Populated Places,Incomplete
+2021-12-01,LBY,Libya,Populated Places,Incomplete
+2021-12-01,NGA,Nigeria,Populated Places,Incomplete
+2021-12-01,SSD,South Sudan,Populated Places,Incomplete
+2021-12-01,UKR,Ukraine,Populated Places,Complete
+2021-12-01,PAK,Pakistan,Populated Places,Complete
+2021-12-01,AFG,Afghanistan,Roads,Complete
+2021-12-01,CAF,Central African Republic,Roads,Complete
+2021-12-01,COD,Democratic Republic of the Congo,Roads,Incomplete
+2021-12-01,COL,Colombia,Roads,Complete
+2021-12-01,MOZ,Mozambique,Roads,Incomplete
+2021-12-01,MMR,Myanmar,Roads,Complete
+2021-12-01,SOM,Somalia,Roads,Complete
+2021-12-01,SDN,Sudan,Roads,Complete
+2021-12-01,TCD,Chad,Roads,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Roads,Complete
+2021-12-01,YEM,Yemen,Roads,Incomplete
+2021-12-01,PSE,State of Palestine,Roads,Complete
+2021-12-01,BFA,Burkina Faso,Roads,Complete
+2021-12-01,ETH,Ethiopia,Roads,Incomplete
+2021-12-01,IRQ,Iraq,Roads,Incomplete
+2021-12-01,MLI,Mali,Roads,Incomplete
+2021-12-01,NER,Niger,Roads,Incomplete
+2021-12-01,SYR,Syrian Arab Republic,Roads,Complete
+2021-12-01,ZWE,Zimbabwe,Roads,Complete
+2021-12-01,BDI,Burundi,Roads,Complete
+2021-12-01,CMR,Cameroon,Roads,Complete
+2021-12-01,HTI,Haiti,Roads,Incomplete
+2021-12-01,LBY,Libya,Roads,Complete
+2021-12-01,NGA,Nigeria,Roads,Complete
+2021-12-01,SSD,South Sudan,Roads,Complete
+2021-12-01,UKR,Ukraine,Roads,Incomplete
+2021-12-01,PAK,Pakistan,Roads,Incomplete
+2021-12-01,AFG,Afghanistan,Airports,Complete
+2021-12-01,CAF,Central African Republic,Airports,Incomplete
+2021-12-01,COD,Democratic Republic of the Congo,Airports,Incomplete
+2021-12-01,COL,Colombia,Airports,Incomplete
+2021-12-01,MOZ,Mozambique,Airports,Incomplete
+2021-12-01,MMR,Myanmar,Airports,Complete
+2021-12-01,SOM,Somalia,Airports,Incomplete
+2021-12-01,SDN,Sudan,Airports,Incomplete
+2021-12-01,TCD,Chad,Airports,Complete
+2021-12-01,VEN,Venezuela (Bolivarian Republic of),Airports,Incomplete
+2021-12-01,YEM,Yemen,Airports,Incomplete
+2021-12-01,PSE,State of Palestine,Airports,Complete
+2021-12-01,BFA,Burkina Faso,Airports,Incomplete
+2021-12-01,ETH,Ethiopia,Airports,Incomplete
+2021-12-01,IRQ,Iraq,Airports,Incomplete
+2021-12-01,MLI,Mali,Airports,Incomplete
+2021-12-01,NER,Niger,Airports,Incomplete
+2021-12-01,SYR,Syrian Arab Republic,Airports,Incomplete
+2021-12-01,ZWE,Zimbabwe,Airports,Incomplete
+2021-12-01,BDI,Burundi,Airports,Incomplete
+2021-12-01,CMR,Cameroon,Airports,Incomplete
+2021-12-01,HTI,Haiti,Airports,Complete
+2021-12-01,LBY,Libya,Airports,Incomplete
+2021-12-01,NGA,Nigeria,Airports,Incomplete
+2021-12-01,SSD,South Sudan,Airports,Incomplete
+2021-12-01,UKR,Ukraine,Airports,Complete
+2021-12-01,PAK,Pakistan,Airports,Incomplete
