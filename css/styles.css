@@ -1329,18 +1329,23 @@ i[class^='humanitarianicons-'] {
       background-color: #BBC9E7; }
     .table-container tr td.Empty {
       background-color: #E6E7E7; }
-  .table-container tr.countryPctComplete td {
-    color: #2E79BB;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 0 3px;
-    text-align: right; }
-    .table-container tr.countryPctComplete td.subcategory, .table-container tr.countryPctComplete td.percentComplete {
-      opacity: 0;
-      pointer-events: none; }
-  .table-container tr:last-child td:first-child,
-  .table-container tr:last-child td:last-child {
-    border: 0; }
+  .table-container tr {
+    background-color: #FFF;
+    transition: all 0.5s ease-out; }
+    .table-container tr.active {
+      background-color: #F7DBD8; }
+    .table-container tr.countryPctComplete td {
+      color: #2E79BB;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 0 3px;
+      text-align: right; }
+      .table-container tr.countryPctComplete td.subcategory, .table-container tr.countryPctComplete td.percentComplete {
+        opacity: 0;
+        pointer-events: none; }
+    .table-container tr:last-child td:first-child,
+    .table-container tr:last-child td:last-child {
+      border: 0; }
 
 .tooltip {
   background-color: #000;
