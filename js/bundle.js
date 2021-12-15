@@ -125,9 +125,8 @@ $( document ).ready(function() {
 
   function createTable() {
     var tooltip = d3.select('body').append('div')
-    .attr('class', 'tooltip')
-    .style('opacity', 0);
-
+      .attr('class', 'tooltip')
+      .style('opacity', 0);
 
     let table = d3.select('.table-container').append('table');
     let headers = table.append('thead').append('tr')
@@ -159,6 +158,7 @@ $( document ).ready(function() {
       }).enter()
       .append('td')
       .attr('class', function (d) {
+        if (d.value==='Not applicable') d.value = 'NA';
         return d.name==='subcategory' || d.name==='percentComplete' ? d.name : d.value;
       })
       .html(function (d) {

@@ -1323,6 +1323,8 @@ i[class^='humanitarianicons-'] {
       font-weight: 600;
       padding: 0 3px;
       text-align: right; }
+    .table-container tr td.NA {
+      background-color: #FFF; }
     .table-container tr td.Complete {
       background-color: #2B78BC; }
     .table-container tr td.Incomplete {
