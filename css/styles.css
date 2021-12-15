@@ -1335,9 +1335,8 @@ i[class^='humanitarianicons-'] {
     font-weight: 600;
     padding: 0 3px;
     text-align: right; }
-    .table-container tr.countryPctComplete td:first-child {
-      opacity: 0; }
     .table-container tr.countryPctComplete td.subcategory, .table-container tr.countryPctComplete td.percentComplete {
+      opacity: 0;
       pointer-events: none; }
   .table-container tr:last-child td:first-child,
   .table-container tr:last-child td:last-child {
