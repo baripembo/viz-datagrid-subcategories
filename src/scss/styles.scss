@@ -285,11 +285,9 @@ i[class^='humanitarianicons-'] {
 				font-weight: 600;
 				padding: 0 3px;
 				text-align: right;
-				&:first-child {
-					opacity: 0;
-				}
 				&.subcategory,
 				&.percentComplete {
+					opacity: 0;
 					pointer-events: none;
 				}
 			}

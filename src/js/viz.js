@@ -57,11 +57,11 @@ $( document ).ready(function() {
       subcategoryOrder.forEach(function(sc) {
         let subcategory = subcategories.get(sc.subcategory);
         let pct = pctComplete.get(sc.subcategory);
-        let item = {subcategory: sc.subcategory, percentComplete: pctFormat(pct[0]['#per+complete']), category: sc.category};
+        let item = {subcategory: sc.subcategory, percentComplete: pct[0]['#per+complete'], category: sc.category};
         columns.forEach(function(col) {
           let pctCountry = pctCountryComplete.get(col);
           if (pctCountry!==undefined) {
-            pctCountryValues[col] = pctFormat(pctCountry[0]['#pct+complete']);
+            pctCountryValues[col] = pctCountry[0]['#pct+complete'];
           }
           let arr = subcategory.get(col);
           if (arr!==undefined) {
@@ -70,8 +70,10 @@ $( document ).ready(function() {
         });
         items.push(item);
       });
+
+      //items.sort((a, b) => (a.percentComplete < b.percentComplete) ? 1 : -1)
       items.push(pctCountryValues);
-      //console.log(items);
+      console.log(items);
 
       createTable();
     });
@@ -122,7 +124,7 @@ $( document ).ready(function() {
       .data(function (d) {
         return columns.map(function (col) {
           let val = (d[col]===undefined) ? 'Empty' : d[col];
-          let obj = { name: col, value: val};
+          let obj = { name: col, value: val, subcategory: d.subcategory};
           obj['category'] = (d.category===undefined) ? d.subcategory : d.category;
           return obj;
         });
@@ -137,7 +139,7 @@ $( document ).ready(function() {
           content = '<div class="icon-container"><i class="'+iconMap[d.category]+'"></i></div>' + d.value; 
         }
         if (d.name==='percentComplete' || d.category==='countryPctComplete') {
-          content = d.value; 
+          content = pctFormat(d.value); 
         }
         return content;
       })
@@ -147,7 +149,7 @@ $( document ).ready(function() {
           if (d.name==='subcategory')
             content = d.category;
           if (d.name==='percentComplete')
-            content = 'Complete % of ' + d.category;
+            content = 'Complete % of ' + d.subcategory;
           if (d.category==='countryPctComplete')
             content = 'Complete % of ' + d.name;
 
