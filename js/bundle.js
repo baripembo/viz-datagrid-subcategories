@@ -159,7 +159,7 @@ $( document ).ready(function() {
       .append('td')
       .attr('class', function (d) {
         if (d.value==='Not applicable') d.value = 'NA';
-        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : d.value;
+        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : 'completeness ' + d.value;
       })
       .html(function (d) {
         let content = '';
@@ -172,7 +172,11 @@ $( document ).ready(function() {
         return content;
       })
       .on('mouseover', function(e, d) {
-        $(e.target).parent().addClass('active')
+        //set row highlight
+        if ($(e.target).hasClass('completeness')) {
+          $(e.target).parent().addClass('active');
+        }
+        //set tooltip
         if (d.name==='subcategory' || d.name==='percentComplete' || d.category==='countryPctComplete') {
           let content = '';
           if (d.name==='subcategory')
