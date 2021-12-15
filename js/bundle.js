@@ -151,15 +151,19 @@ $( document ).ready(function() {
       .data(function (d) {
         return columns.map(function (col) {
           let val = (d[col]===undefined) ? 'Empty' : d[col];
-          let obj = { name: col, value: val, subcategory: d.subcategory};
+          let obj = { name: col, value: val };
           obj['category'] = (d.category===undefined) ? d.subcategory : d.category;
+          if (d.subcategory!=='countryPctComplete') {
+            obj['subcategory'] = d.subcategory;
+          }
           return obj;
         });
       }).enter()
       .append('td')
       .attr('class', function (d) {
         if (d.value==='Not applicable') d.value = 'NA';
-        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : 'completeness ' + d.value;
+        let val = d.category==='countryPctComplete' ? d.value : 'completeness ' + d.value;
+        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : val;
       })
       .html(function (d) {
         let content = '';
