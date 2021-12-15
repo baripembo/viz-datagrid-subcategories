@@ -278,6 +278,11 @@ i[class^='humanitarianicons-'] {
 		}
 	}
 	tr {
+		background-color: #FFF;
+		transition: all 0.5s ease-out;
+		&.active {
+			background-color: #F7DBD8;
+		}
 		&.countryPctComplete {
 			td {
 				color: #2E79BB;

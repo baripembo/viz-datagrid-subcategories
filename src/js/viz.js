@@ -144,6 +144,7 @@ $( document ).ready(function() {
         return content;
       })
       .on('mouseover', function(e, d) {
+        $(e.target).parent().addClass('active')
         if (d.name==='subcategory' || d.name==='percentComplete' || d.category==='countryPctComplete') {
           let content = '';
           if (d.name==='subcategory')
@@ -161,7 +162,8 @@ $( document ).ready(function() {
             .style('top', ($(e.target).offset().top - $('.tooltip').outerHeight()) + 'px');
         }
       })
-      .on('mouseout', function(d) {
+      .on('mouseout', function(e, d) {
+        $(e.target).parent().removeClass('active')
         tooltip.transition()
           .duration(500)
           .style('opacity', 0);
