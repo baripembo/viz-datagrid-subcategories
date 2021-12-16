@@ -250,6 +250,7 @@ i[class^='humanitarianicons-'] {
 			border-bottom: 0.5px solid #BFBFBF;
 			cursor: pointer;
 			text-transform: capitalize;
+			white-space: nowrap;
 			width: 220px;
 			.icon-container {
 				display: inline-block;
@@ -337,6 +338,21 @@ i[class^='humanitarianicons-'] {
 }
 
 
-@media only screen and (max-width: 767px) {
-
+@media only screen and (max-width: 768px) {
+	main {
+		padding: 0 10px;
+	}
+	h2 {
+		font-size: 13px;
+		line-height: 16px;
+    align-items: center;
+	}
+	.control-order-by .orderDropdown {
+		.dropdown-toggle {
+			white-space: nowrap;
+		}
+		.dropdown-toggle-text {
+			font-size: 13px;
+		}
+	}
 }
