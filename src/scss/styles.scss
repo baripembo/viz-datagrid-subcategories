@@ -107,7 +107,7 @@ i[class^='humanitarianicons-'] {
 		display: inline;
 		position: relative;
 		.dropdown-toggle {
-	    background-color: #FFF;
+	    background-color: transparent;
 	    border: none;
 	    color: #007CE0;
     	cursor: pointer;
@@ -159,6 +159,7 @@ i[class^='humanitarianicons-'] {
   > li > a {
     clear: both;
     color: #333;
+    cursor: pointer;
     display: block;
     font-weight: 400;
     line-height: 1.42857143;
@@ -267,6 +268,9 @@ i[class^='humanitarianicons-'] {
 			padding: 0 3px;
 			text-align: right;
 		}
+		&.NA {
+			background-color: #FFF;
+		}
 		&.Complete {
 			background-color: #2B78BC;
 		}
@@ -279,7 +283,7 @@ i[class^='humanitarianicons-'] {
 	}
 	tr {
 		background-color: #FFF;
-		transition: all 0.5s ease-out;
+		transition: background-color 0.5s ease-out, opacity 0.1s ease-in-out;
 		&.active {
 			background-color: #F7DBD8;
 		}

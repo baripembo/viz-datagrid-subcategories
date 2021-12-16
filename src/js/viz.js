@@ -4,7 +4,7 @@ $( document ).ready(function() {
   const PCT_COMPLETE_COUNTRY = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=percentage+data+complete&tagger-04-tag=%23pct%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23pct%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23pct%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D579688831';
   const pctFormat = d3.format('.0%');
   let columns, items = [];
-  let iconMap, countryMap;
+  let iconMap, countryMap, sortOrder, tooltip;
 
 
   function getData() {
@@ -88,18 +88,38 @@ $( document ).ready(function() {
 
     $(document).mouseup(function (e) {
       let sortBtn = $('#field-order-by');
-      if (!sortBtn.is(e.target) && 
-      sortBtn.has(e.target).length === 0) {
+      if (!sortBtn.is(e.target) && sortBtn.has(e.target).length === 0) {
         $('.orderDropdown').removeClass('open');
+      }
+    });
+
+    $('.dropdown-menu a').on('click', function(e) {
+      $('.dropdown-toggle-text').html($(this).html());
+      if ($(this).attr('val')!==sortOrder) {
+        sortOrder = $(this).attr('val')
+        sortTable();
       }
     });
   }
 
-  function createTable() {
-    var tooltip = d3.select('body').append('div')
-    .attr('class', 'tooltip')
-    .style('opacity', 0);
+  function sortTable() {
+    let pctRow = items.pop(); //save last row of complete percentages before sorting
+    items.sort(function(a, b) {
+      let sorted = (sortOrder==='dsc') ? d3.descending(a.percentComplete, b.percentComplete) : d3.ascending(a.percentComplete, b.percentComplete);
+      return sorted;
+    });
+    items.push(pctRow); //push complete pct row at the end so its always at the bottom
 
+    const tbody = d3.select('tbody');
+    tbody.selectAll("*").remove();
+    buildRows();
+  }
+
+
+  function createTable() {
+    tooltip = d3.select('body').append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0);
 
     let table = d3.select('.table-container').append('table');
     let headers = table.append('thead').append('tr')
@@ -112,26 +132,46 @@ $( document ).ready(function() {
         return d==='subcategory'||d==='percentComplete' ? '' : `<div><img class="flag" src="https://data.humdata.org/visualization/datagrid/assets/flags/${iso}.png">${d}</div>`;
       });
 
+    table.append('tbody');
+    buildRows();
+  }
+
     
-    let rows = table.append('tbody').selectAll('tr')
+  function buildRows() {
+    let tbody = d3.select('tbody');
+    let rows = tbody.selectAll('tr')
       .data(items).enter()
-      .append('tr')
-      .attr('class', function (d) {
-        return d.subcategory;
-      });
-    
+      .append('tr')     
+        .attr('class', function (d) {
+          return d.subcategory;
+        });
+
+    rows
+        .style('opacity', 0)
+        .transition()
+        .duration(0)
+        .delay(function(d, i) {
+          return i*20
+        })
+        .style('opacity', 1);
+
     rows.selectAll('td')
       .data(function (d) {
         return columns.map(function (col) {
           let val = (d[col]===undefined) ? 'Empty' : d[col];
-          let obj = { name: col, value: val, subcategory: d.subcategory};
+          let obj = { name: col, value: val };
           obj['category'] = (d.category===undefined) ? d.subcategory : d.category;
+          if (d.subcategory!=='countryPctComplete') {
+            obj['subcategory'] = d.subcategory;
+          }
           return obj;
         });
       }).enter()
       .append('td')
       .attr('class', function (d) {
-        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : d.value;
+        if (d.value==='Not applicable') d.value = 'NA';
+        let val = d.category==='countryPctComplete' ? d.value : 'completeness ' + d.value;
+        return d.name==='subcategory' || d.name==='percentComplete' ? d.name : val;
       })
       .html(function (d) {
         let content = '';
@@ -144,7 +184,11 @@ $( document ).ready(function() {
         return content;
       })
       .on('mouseover', function(e, d) {
-        $(e.target).parent().addClass('active')
+        //set row highlight
+        if ($(e.target).hasClass('completeness')) {
+          $(e.target).parent().addClass('active');
+        }
+        //set tooltip
         if (d.name==='subcategory' || d.name==='percentComplete' || d.category==='countryPctComplete') {
           let content = '';
           if (d.name==='subcategory')
