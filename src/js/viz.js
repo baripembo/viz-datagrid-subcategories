@@ -199,9 +199,15 @@ $( document ).ready(function() {
           tooltip.transition()
             .duration(200)
             .style('opacity', .9);
+
           tooltip.html(content)
-            .style('left', ($(e.target).offset().left + $(e.target).width()/2 - $('.tooltip').width()/2) + 'px')
-            .style('top', ($(e.target).offset().top - $('.tooltip').outerHeight()) + 'px');
+            .style('top', ($(e.target).offset().top - $('.tooltip').outerHeight()) + 'px')
+            .style('left', function() {
+              return ($(e.target).attr('class')=='percentComplete') ? $(e.target).offset().left + $(e.target).width() - $('.tooltip').width() + 'px' : $(e.target).offset().left + $(e.target).width()/2 - $('.tooltip').width()/2 + 'px';
+            })
+            .classed('right', function() {
+              return ($(e.target).attr('class')=='percentComplete') ? true : false;
+            });
         }
       })
       .on('mouseout', function(e, d) {

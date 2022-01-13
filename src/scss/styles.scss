@@ -29,10 +29,6 @@ main {
 	flex: 1;
 }
 
-// main {
-// 	opacity: 0;
-// }
-
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -82,10 +78,6 @@ p {
 	font-size: 12px;
 	line-height: 14px;
 	margin: 0;
-}
-
-.sort {
-
 }
 
 i[class^='humanitarianicons-'] {
@@ -141,8 +133,6 @@ i[class^='humanitarianicons-'] {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  // box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
-  // -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
 	display: none;
   float: left;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -223,6 +213,7 @@ i[class^='humanitarianicons-'] {
 }
 
 .table-container {
+	margin-right: 10px;
 	margin-top: 150px;
 	table { 
 		width: 100%; 
@@ -324,16 +315,23 @@ i[class^='humanitarianicons-'] {
   text-align: center;
   width: auto;
   &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 0px;
-    left: 50%;
     bottom: 0;
     border: 6px solid transparent;
     border-bottom: 0;
     border-top: 6px solid #000;
+    content: "";
+    display: block;
+    position: absolute;
+    right: unset;
+    left: 48%;
     transform: translate(-50%, calc(100%));
+    width: 0px;
+  }
+  &.right {
+  	&:before {
+  		left: unset;
+  		right: 14px;
+  	}
   }
 }
 
@@ -343,9 +341,10 @@ i[class^='humanitarianicons-'] {
 		padding: 0 10px;
 	}
 	h2 {
+    align-items: center;
 		font-size: 13px;
 		line-height: 16px;
-    align-items: center;
+    padding: 5px 15px;
 	}
 	.control-order-by .orderDropdown {
 		.dropdown-toggle {
