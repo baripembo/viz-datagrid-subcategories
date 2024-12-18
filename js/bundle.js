@@ -74,7 +74,7 @@ $( document ).ready(function() {
       const categories = d3.group(data, d=> d['Category']);
       let subcategoryOrder = [];
       categories.forEach(function(cat) {
-        let subcats = Array.from(new Set(cat.map(d => d['Subcategory']))).sort();
+        let subcats = Array.from(new Set(cat.map(d => d['Subcategory'])));
         subcats.forEach(function(sc) {
           subcategoryOrder.push({category: cat[0]['Category'], subcategory: sc})
         });
