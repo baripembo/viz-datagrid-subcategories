@@ -27,9 +27,12 @@ function hxlProxyToJSON(input){
     return output;
 }
 $( document ).ready(function() {
-  const DATA_COMPLETE = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso3&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=subcategory&tagger-04-tag=%23subcategory&tagger-05-header=category&tagger-05-tag=%23category&tagger-06-header=status&tagger-06-tag=%23status&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1171577919';
-  const PCT_COMPLETE_SUBCATEGORY  = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=subcategory&tagger-02-tag=%23subcategory&tagger-03-header=category&tagger-03-tag=%23category&tagger-04-header=percentage+data+complete&tagger-04-tag=%23per%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23per%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23per%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1944345237';
-  const PCT_COMPLETE_COUNTRY = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=percentage+data+complete&tagger-04-tag=%23pct%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23pct%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23pct%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D579688831';
+  const DATA_COMPLETE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRguxePjzXGhVXDTL6-JuS5Vppx7fKnk-CBheunS_5RGDKV36tOfLHa5RZ94oO2pDCLcdNC8BBisJzT/pub?gid=1171577919&single=true&output=csv';
+  const PCT_COMPLETE_SUBCATEGORY = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRguxePjzXGhVXDTL6-JuS5Vppx7fKnk-CBheunS_5RGDKV36tOfLHa5RZ94oO2pDCLcdNC8BBisJzT/pub?gid=1944345237&single=true&output=csv';
+  const PCT_COMPLETE_COUNTRY = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRguxePjzXGhVXDTL6-JuS5Vppx7fKnk-CBheunS_5RGDKV36tOfLHa5RZ94oO2pDCLcdNC8BBisJzT/pub?gid=579688831&single=true&output=csv';
+  //onst DATA_COMPLETE = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso3&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=subcategory&tagger-04-tag=%23subcategory&tagger-05-header=category&tagger-05-tag=%23category&tagger-06-header=status&tagger-06-tag=%23status&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1171577919';
+  //const PCT_COMPLETE_SUBCATEGORY  = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=subcategory&tagger-02-tag=%23subcategory&tagger-03-header=category&tagger-03-tag=%23category&tagger-04-header=percentage+data+complete&tagger-04-tag=%23per%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23per%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23per%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1944345237';
+  //const PCT_COMPLETE_COUNTRY = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=percentage+data+complete&tagger-04-tag=%23pct%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23pct%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23pct%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D579688831';
   const pctFormat = d3.format('.0%');
   let columns, items = [];
   let iconMap, countryMap, sortOrder, tooltip;
@@ -46,54 +49,55 @@ $( document ).ready(function() {
       let pctSubcategoryData = d[1];
       let pctCountryData = d[2]
 
-      // console.log(data)
-      // console.log(pctSubcategoryData)
-      // console.log(pctCountryData)
+      console.log('data',data)
+      console.log('pctSubcategoryData',pctSubcategoryData)
+      console.log('pctCountryData',pctCountryData)
 
       //map icons to category
       iconMap = {
         'Affected People': 'humanitarianicons-Affected-population',
+        'Climate': 'humanitarianicons-Drought',
         'Coordination & Context': 'humanitarianicons-Coordination',
-        'Food Security & Nutrition': 'humanitarianicons-Food-Security',
+        'Food Security, Nutrition & Poverty': 'humanitarianicons-Food-Security',
         'Geography & Infrastructure': 'humanitarianicons-Location',
-        'Health & Education': 'humanitarianicons-Health',
-        'Population & Socio-economic Indicators': 'humanitarianicons-People-in-need'
+        'Health & Education': 'humanitarianicons-Health'
       };
 
-      countryMap = d3.group(data, d => d['#location']);
+      countryMap = d3.group(data, d => d['Location']);
 
       //define table column labels
-      columns = Array.from(new Set(data.map(d => d['#location']))).sort();
+      columns = Array.from(new Set(data.map(d => d['Location']))).sort();
       columns.unshift('subcategory');
       columns.push('percentComplete');
 
       //group data by category and then sort by subcategories
-      const categories = d3.group(data, d=> d['#category']);
+      const categories = d3.group(data, d=> d['Category']);
       let subcategoryOrder = [];
       categories.forEach(function(cat) {
-        let subcats = Array.from(new Set(cat.map(d => d['#subcategory']))).sort();
+        let subcats = Array.from(new Set(cat.map(d => d['Subcategory']))).sort();
         subcats.forEach(function(sc) {
-          subcategoryOrder.push({category: cat[0]['#category'], subcategory: sc})
+          subcategoryOrder.push({category: cat[0]['Category'], subcategory: sc})
         });
       });
 
       //format data for table
-      const subcategories = d3.group(data, d => d['#subcategory'], d => d['#location']);
-      const pctComplete = d3.group(pctSubcategoryData, d=> d['#subcategory']);
-      const pctCountryComplete = d3.group(pctCountryData, d=> d['#location']);
+      const subcategories = d3.group(data, d => d['Subcategory'], d => d['Location']);
+      const pctComplete = d3.group(pctSubcategoryData, d=> d['Subcategory']);
+      const pctCountryComplete = d3.group(pctCountryData, d=> d['Location']);
       let pctCountryValues = {subcategory: 'countryPctComplete', percentComplete: null};
       subcategoryOrder.forEach(function(sc) {
         let subcategory = subcategories.get(sc.subcategory);
         let pct = pctComplete.get(sc.subcategory);
-        let item = {subcategory: sc.subcategory, percentComplete: pct[0]['#per+complete'], category: sc.category};
+        console.log(sc, subcategory, pct)
+        let item = {subcategory: sc.subcategory, percentComplete: pct[0]['Percentage Data Complete'], category: sc.category};
         columns.forEach(function(col) {
           let pctCountry = pctCountryComplete.get(col);
           if (pctCountry!==undefined) {
-            pctCountryValues[col] = pctCountry[0]['#pct+complete'];
+            pctCountryValues[col] = pctCountry[0]['Percentage Data Complete'];
           }
           let arr = subcategory.get(col);
           if (arr!==undefined) {
-            item[col] = arr[0]['#status'];
+            item[col] = arr[0]['Status'];
           }
         });
         items.push(item);
@@ -156,7 +160,7 @@ $( document ).ready(function() {
       .append('th')
       .classed('rotate', d => d!=='subcategory' && d!=='percentComplete')
       .html(function (d) {
-        let iso = (countryMap.get(d)!==undefined) ? (countryMap.get(d)[0]['#iso3']).toUpperCase() : '';
+        let iso = (countryMap.get(d)!==undefined) ? (countryMap.get(d)[0]['ISO3']).toUpperCase() : '';
         return d==='subcategory'||d==='percentComplete' ? '' : `<div><img class="flag" src="https://data.humdata.org/visualization/datagrid/assets/flags/${iso}.png">${d}</div>`;
       });
 
