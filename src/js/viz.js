@@ -198,9 +198,9 @@ $( document ).ready(function() {
           if (d.name==='subcategory')
             content = d.category;
           if (d.name==='percentComplete')
-            content = 'Complete % of ' + d.subcategory;
+            content = 'Available % of ' + d.subcategory;
           if (d.category==='countryPctComplete')
-            content = 'Complete % of ' + d.name;
+            content = 'Available % of ' + d.name;
 
           tooltip.transition()
             .duration(200)
