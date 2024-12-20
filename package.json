@@ -1,8 +1,8 @@
 {
-  "name": "viz-starter",
+  "name": "viz-datagrid-subcategories",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/OCHA-DAP/viz-datagrids-subcategories.git",
+  "homepage": "https://github.com/ocha-dap/viz-datagrid-subcategories.git",
   "main": " ",
   "scripts": {
     "start": "http-server ./dist -c-1 -p 3000",
