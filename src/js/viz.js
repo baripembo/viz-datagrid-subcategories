@@ -3,9 +3,6 @@ $( document ).ready(function() {
   const DATA_COMPLETE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRguxePjzXGhVXDTL6-JuS5Vppx7fKnk-CBheunS_5RGDKV36tOfLHa5RZ94oO2pDCLcdNC8BBisJzT/pub?gid=1171577919&single=true&output=csv';
   const PCT_COMPLETE_SUBCATEGORY = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRguxePjzXGhVXDTL6-JuS5Vppx7fKnk-CBheunS_5RGDKV36tOfLHa5RZ94oO2pDCLcdNC8BBisJzT/pub?gid=1944345237&single=true&output=csv';
   const PCT_COMPLETE_COUNTRY = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRguxePjzXGhVXDTL6-JuS5Vppx7fKnk-CBheunS_5RGDKV36tOfLHa5RZ94oO2pDCLcdNC8BBisJzT/pub?gid=579688831&single=true&output=csv';
-  //const DATA_COMPLETE = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso3&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=subcategory&tagger-04-tag=%23subcategory&tagger-05-header=category&tagger-05-tag=%23category&tagger-06-header=status&tagger-06-tag=%23status&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1171577919';
-  //const PCT_COMPLETE_SUBCATEGORY  = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=subcategory&tagger-02-tag=%23subcategory&tagger-03-header=category&tagger-03-tag=%23category&tagger-04-header=percentage+data+complete&tagger-04-tag=%23per%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23per%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23per%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D1944345237';
-  //const PCT_COMPLETE_COUNTRY = 'https://proxy.hxlstandard.org/data.csv?dest=data_edit&strip-headers=on&force=on&tagger-match-all=on&tagger-01-header=date&tagger-01-tag=%23date&tagger-02-header=iso3&tagger-02-tag=%23iso&tagger-03-header=location&tagger-03-tag=%23location&tagger-04-header=percentage+data+complete&tagger-04-tag=%23pct%2Bcomplete&tagger-05-header=percentage+data+incomplete&tagger-05-tag=%23pct%2Bincomplete&tagger-06-header=percentage+no+data&tagger-06-tag=%23pct%2Bnodata&header-row=1&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1KJ4U6rc0ROWzpfHnaSlpRijF-t8T0Ze4Pq2sBjAqKrc%2Fedit%3Fpli%3D1%23gid%3D579688831';
 
   const pctFormat = d3.format('.0%');
   let columns, items = [];
@@ -20,11 +17,7 @@ $( document ).ready(function() {
     ]).then(function(d) {
       let data = d[0];
       let pctSubcategoryData = d[1];
-      let pctCountryData = d[2]
-
-      console.log('data',data)
-      console.log('pctSubcategoryData',pctSubcategoryData)
-      console.log('pctCountryData',pctCountryData)
+      let pctCountryData = d[2];
 
       //map icons to category
       iconMap = {
@@ -61,8 +54,8 @@ $( document ).ready(function() {
       subcategoryOrder.forEach(function(sc) {
         let subcategory = subcategories.get(sc.subcategory);
         let pct = pctComplete.get(sc.subcategory);
-        console.log(sc, subcategory, pct)
         let item = {subcategory: sc.subcategory, percentComplete: pct[0]['Percentage Data Complete'], category: sc.category};
+        let isNA = true;
         columns.forEach(function(col) {
           let pctCountry = pctCountryComplete.get(col);
           if (pctCountry!==undefined) {
@@ -71,13 +64,17 @@ $( document ).ready(function() {
           let arr = subcategory.get(col);
           if (arr!==undefined) {
             item[col] = arr[0]['Status'];
+
+            // if "Status" is "Not applicable", set flag to false
+            if (arr[0]['Status'] !== "Not applicable") {
+              isNA = false;
+            }
           }
         });
-        items.push(item);
+        if (!isNA) items.push(item);
       });
 
       items.push(pctCountryValues);
-      //console.log(items);
 
       createTable();
     });
