@@ -54,24 +54,26 @@ $( document ).ready(function() {
       subcategoryOrder.forEach(function(sc) {
         let subcategory = subcategories.get(sc.subcategory);
         let pct = pctComplete.get(sc.subcategory);
-        let item = {subcategory: sc.subcategory, percentComplete: pct[0]['Percentage Data Complete'], category: sc.category};
-        let isNA = true;
-        columns.forEach(function(col) {
-          let pctCountry = pctCountryComplete.get(col);
-          if (pctCountry!==undefined) {
-            pctCountryValues[col] = pctCountry[0]['Percentage Data Complete'];
-          }
-          let arr = subcategory.get(col);
-          if (arr!==undefined) {
-            item[col] = arr[0]['Status'];
-
-            // if "Status" is "Not applicable", set flag to false
-            if (arr[0]['Status'] !== "Not applicable") {
-              isNA = false;
+        if (pct !== undefined) {
+          let item = {subcategory: sc.subcategory, percentComplete: pct[0]['Percentage Data Complete'], category: sc.category};
+          let isNA = true;
+          columns.forEach(function(col) {
+            let pctCountry = pctCountryComplete.get(col);
+            if (pctCountry!==undefined) {
+              pctCountryValues[col] = pctCountry[0]['Percentage Data Complete'];
             }
-          }
-        });
-        if (!isNA) items.push(item);
+            let arr = subcategory.get(col);
+            if (arr!==undefined) {
+              item[col] = arr[0]['Status'];
+
+              // if "Status" is "Not applicable", set flag to false
+              if (arr[0]['Status'] !== "Not applicable") {
+                isNA = false;
+              }
+            }
+          });
+          if (!isNA) items.push(item);
+        }
       });
 
       items.push(pctCountryValues);
